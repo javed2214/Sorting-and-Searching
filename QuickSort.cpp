@@ -33,7 +33,7 @@ int main(){
 	int a[]={4,3,7,8,2,6,9,12};
 	int n=sizeof(a)/sizeof(int);
 
-	quickSort(a,0,7);
+	quickSort(a,0,n-1);
 
 	for(auto it:a)
 		cout<<it<<" ";
