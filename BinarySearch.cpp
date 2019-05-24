@@ -20,6 +20,22 @@ int binarySearch(int *a, int s, int e, int x){
 	return -1;
 }
 
+/*
+***********ITERATIVE BINARY SEARCH***********
+
+int binarySearch(int *a, int start, int end, int x){
+
+	while(start <= end){
+		int mid=(start + end)/2;
+		if(x==a[mid]) return mid;
+		if(x>a[mid]) start=mid+1;
+		if(x<a[mid]) end=mid-1;
+	}
+	return -1;
+}
+*/
+
+
 int main(){
 	int a[]={1,2,3,4,5,6,7,8,9,10};
 	int n=sizeof(a)/sizeof(int);
