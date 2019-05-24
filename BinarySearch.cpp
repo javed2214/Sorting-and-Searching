@@ -21,7 +21,7 @@ int binarySearch(int *a, int s, int e, int x){
 }
 
 /*
-***********ITERATIVE BINARY SEARCH***********
+*********** ITERATIVE BINARY SEARCH ***********
 
 int binarySearch(int *a, int start, int end, int x){
 
