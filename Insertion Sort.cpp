@@ -3,24 +3,31 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+void insertionSort(int *a, int n){
+
+	int key,i,j=1;
+
+	for(int j=1;j<n;j++){
+
+		key=a[j];
+		i=j-1;
+
+		while(i>=0 and a[i]>key){
+			a[i+1]=a[i];
+			i=i-1;
+		}
+		a[i+1]=key;
+	}
+}
+
 int main(){
 
-	int a[]={4,7,1,3,9,8,2};
+	int a[]={4,2,5,7,1,9,8};
 	int n=sizeof(a)/sizeof(int);
 
-	int hole,val;
+	insertionSort(a,n);
 
-	for(int i=1;i<n;i++){
-		val=a[i];
-		hole=i;
-		while(hole>0 and a[hole-1]>val){
-			a[hole]=a[hole-1];
-			hole=hole-1;
-		}
-		a[hole]=val;
-	}
-	for(auto it:a)
-		cout<<it<<" ";
+	for(int i=0;i<n;i++) cout<<a[i]<<" ";
 
 	return 0;
 }
